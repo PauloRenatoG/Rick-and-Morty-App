@@ -1,6 +1,45 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    ext.kotlin_version = "1.3.72"
+    ext {
+        // Api EndPoint
+        apiRelease = "https://rickandmortyapi.com/api"
+        apiStaging = "https://rickandmortyapi.com/api"
+
+        // Kotlin
+        kotlin_version = '1.3.72'
+        kotlinCoreVersion = '1.3.1'
+
+        // Android
+        gradleVersion = '3.6.2'
+        appcompatVersion = '1.1.0'
+        constraintlayoutVersion = '1.1.3'
+        materialVersion = '1.2.0'
+
+        // Coroutine
+        coroutinesVersion = '1.3.2'
+        coroutinesCoreVersion = '1.3.2'
+
+        // LifeCycle
+        lifeCycleVersion = '2.2.0'
+        viewModelVersion = '2.2.0'
+
+        // Retrofit
+        retrofitVersion = '2.9.0'
+
+        // Room
+        roomVersion = "2.2.5"
+
+        // Paging 3
+        pagingVersion = "3.0.0-alpha03"
+
+        // Glide
+        glideVersion = '4.11.0'
+
+        //Tests
+        junitVersion = '4.13'
+        junitExtVersion = '1.1.1'
+        espressoVersion = '3.2.0'
+    }
     repositories {
         google()
         jcenter()
@@ -8,7 +47,7 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:4.0.1"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-
+        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.28-alpha'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
